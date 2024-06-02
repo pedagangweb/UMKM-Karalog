@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <title>Katalog Produk</title>
+    <style>
+        .slide-transition {
+            transition: transform 3s ease;
+        }
+
+        .slide-right {
+            transform: translateX(100%);
+        }
+
+        .slide-left {
+            transform: translateX(-100%);
+        }
+        .zoom-effect:hover {
+            transform: scale(1.05); /* Skala saat tombol di-hover */
+            transition: transform 0.6s ease; /* Efek transisi untuk memberikan kesan animasi */
+        }
+
+    </style>
+</head>
+<body class="bg-gray-100">
+    <header class="bg-green-900 text-white text-center py-4">
+        <!-- Logo di Tengah -->
+        <div class="mx-auto">
+            <h1 class="text-4xl font-bold mb-1">Katalog</h1>
+            <h1 class="text-lg font-semibold mb-1">UMKM PADUKUHAN KARANGREJEK</h1>
+        </div>
+    </header>
+    <div class="relative  mt-2">
+        <div class="absolute  w-80 h-10"></div>
+        <img id="slidingImage" src="gambar/gorengan.jpeg" alt="Foto Gorengan" class="mx-auto w-full h-80 object-cover mb-2 slide-transition">
+        <button onclick="changeImagekanan()" class="absolute top-10 right-0 p-4 text-white">>></button>
+        <button onclick="changeImagekiri()" class="absolute top-10 left-0 p-4 text-white"><<</button>
+    </div>
+    
+    <div class="container mx-auto p-8">
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+                <!--Tempe Bu Giyanti-->
+                    <button class="bg-white p-6 rounded shadow-md zoom-effect">
+                        <a href="tempegiyanti.html" >
+                            <img src="gambar\tempe kertas.jpeg" alt="Produk 1" class="w-full h-40 object-cover mb-4">
+                            <h2 class="text-lg font-semibold mb-2">Tempe Bu Giyanti</h2>
+                            <p class="text-gray-600">Makanan</p>
+                            <p class="text-green-500 font-bold mt-2">Rp.1.000,-/ 5pcs</p>
+                        </a>
+                    </button>
+                <!--Jamu Yudistira-->
+                    <button class="bg-white p-6 rounded shadow-md zoom-effect">
+                        <a href="jamu.html">
+                            <img src="gambar\jamu.jpeg" alt="Produk 1" class="w-full h-40 object-cover mb-4">
+                            <h2 class="text-lg font-semibold mb-2">Jamu Yudhistira</h2>
+                            <p class="text-gray-600">Minuman</p>
+                            <p class="text-green-500 font-bold mt-2">Rp.5.000,-/ botol</p>
+                        </a>
+                    </button>
+                <!--tiwul Chokot-->
+         
+                    <button class="bg-white p-6 rounded shadow-md zoom-effect">
+                        <a href="tiwul.html">
+                            <img src="gambar\tiwul chokot.jpeg" alt="Produk 1" class="w-full h-40 object-cover mb-4">
+                            <h2 class="text-lg font-semibold mb-2">Tiwul Chokot</h2>
+                            <p class="text-gray-600">Makanan</p>
+                            <p class="text-green-500 font-bold mt-2">Rp.35.000,-/ toples</p>                          
+                        </a>
+                    </button>
+                <!--secang uwuh-->
+                    <button class="bg-white p-6 rounded shadow-md zoom-effect">
+                        <a href="wedang.html">
+                            <img src="gambar\wedang uwuh.jpeg" alt="Produk 1" class="w-full h-40 object-cover mb-4">
+                            <h2 class="text-lg font-semibold mb-2">Wedang Uwuh dan Secang</h2>
+                            <p class="text-gray-600">Minuman</p>
+                            <p class="text-green-500 font-bold mt-2">Rp.10.000,-/ pcs</p>
+                        </a>
+                    </button>
+                <!--Bakso-->
+                    <button class="bg-white p-6 rounded shadow-md zoom-effect">
+                        <a href="bakso.html">
+                            <img src="gambar\tahu bakso.jpeg" alt="Produk 1" class="w-full h-40 object-cover mb-4">
+                            <h2 class="text-lg font-semibold mb-2">Bakso</h2>
+                            <p class="text-gray-600">Makanan</p>
+                            <p class="text-green-500 font-bold mt-2">Rp.2.000,-s/d Rp.5.000,-</p>
+                        </a> 
+                    </button>
+                <!--Tempe Bu Paerah-->
+                <button class="bg-white p-6 rounded shadow-md zoom-effect">
+                    <a href="tempepaerah.html" >
+                        <img src="gambar\tempe daun jati.jpeg" alt="Produk 1" class="w-full h-40 object-cover mb-4">
+                        <h2 class="text-lg font-semibold mb-2">Tempe Bu Paerah</h2>
+                        <p class="text-gray-600">Makanan</p>
+                        <p class="text-green-500 font-bold mt-2">Rp.2.500,-/10 pcs</p>
+                    </a>
+                </button>
+                <!--Tempe Bu Girahmi-->
+                <button class="bg-white p-6 rounded shadow-md zoom-effect">
+                    <a href="tempegirah.html" >
+                        <img src="gambar\tempe kertas 1.jpeg" alt="Produk 1" class="w-full h-40 object-cover mb-4">
+                        <h2 class="text-lg font-semibold mb-2">Tempe Bu Girahmi</h2>
+                        <p class="text-gray-600">Makanan</p>
+                        <p class="text-green-500 font-bold mt-2">Rp.1.000,-/ 3pcs</p>
+                    </a>
+                </button>
+                <!--Gorengan Bu Hartini-->
+                <button class="bg-white p-6 rounded shadow-md zoom-effect">
+                    <a href="gorengan.html" >
+                        <img src="gambar\gorengan.jpeg" alt="Produk 1" class="w-full h-40 object-cover mb-4">
+                        <h2 class="text-lg font-semibold mb-2">Gorengan Bu Hartini</h2>
+                        <p class="text-gray-600">Makanan</p>
+                        <p class="text-green-500 font-bold mt-2">Rp.2.000,-/ 3pcs</p>
+                    </a>
+                </button>
+                <!--Mantul Shop-->
+                <button class="bg-white p-6 rounded shadow-md zoom-effect">
+                    <a href="buah.html" >
+                        <img src="gambar\buah.jpeg" alt="Produk 1" class="w-full h-40 object-cover mb-4">
+                        <h2 class="text-lg font-semibold mb-2">Mantul Shop</h2>
+                        <p class="text-gray-600">Toko Buah</p>
+                        <p class="text-green-500 font-bold mt-2">-</p>
+                    </a>
+                </button>
+                <!--Serodjan Widji Bathik-->
+                <button class="bg-white p-6 rounded shadow-md zoom-effect">
+                    <a href="seroyakain.html" >
+                        <img src="gambar\batik.jpeg" alt="Produk 1" class="w-full h-40 object-cover mb-4">
+                        <h2 class="text-lg font-semibold mb-2">Serodjan Widji Bathik</h2>
+                        <p class="text-gray-600">Kain Batik</p>
+                        <p class="text-green-500 font-bold mt-2">-</p>
+                    </a>
+                </button>
+                <!--Serodjan Widji Bathik-->
+                <button class="bg-white p-6 rounded shadow-md zoom-effect">
+                    <a href="saroyatas.html" >
+                        <img src="gambar\Tas.jpeg" alt="Produk 1" class="w-full h-40 object-cover mb-4">
+                        <h2 class="text-lg font-semibold mb-2">Serodja Widji Bathik</h2>
+                        <p class="text-gray-600">Tas</p>
+                        <p class="text-green-500 font-bold mt-2">-</p>
+                    </a>
+                </button>
+                <!--Onde-Onde Ketawa-->
+                <button class="bg-white p-6 rounded shadow-md zoom-effect">
+                    <a href="ondeonde.html" >
+                        <img src="gambar\onde ketawa.jpeg" alt="Produk 1" class="w-full h-40 object-cover mb-4">
+                        <h2 class="text-lg font-semibold mb-2">Onde-Onde Ketawa</h2>
+                        <p class="text-gray-600">Makanan</p>
+                        <p class="text-green-500 font-bold mt-2">-</p>
+                    </a>
+                </button>
+                <!--Nwa-Nwa Coffe-->
+                <button class="bg-white p-6 rounded shadow-md zoom-effect">
+                    <a href="nwanwa.html" >
+                        <img src="gambar\Nwanwa.jpeg" alt="Produk 1" class="w-full h-40 object-cover mb-4">
+                        <h2 class="text-lg font-semibold mb-2">Nwa-Nwa Coffe</h2>
+                        <p class="text-gray-600">Makanan & Minuman</p>
+                        <p class="text-green-500 font-bold mt-2">-</p>
+                    </a>
+                </button>
+
+            </div>
+
+    </div>
+    <script>
+        const images = [
+            'gambar/wedang uwuh.jpeg',
+            'gambar/tas anyam.jpeg',
+            'gambar/tiwul chokot.jpeg',
+            'gambar/tempe daun jati 1.jpeg'
+            // Tambahkan gambar sesuai kebutuhan
+        ];
+
+        let imageIndex = 0;
+
+        function changeImagekanan() {
+            const slidingImage = document.getElementById('slidingImage');
+
+            slidingImage.classList.remove('slide-left');
+            slidingImage.classList.add('slide-right');
+
+            setTimeout(() => {
+                const imageUrl = images[imageIndex];
+                slidingImage.src = imageUrl;
+
+                imageIndex = (imageIndex + 1) % images.length;
+
+                slidingImage.classList.remove('slide-right');
+                slidingImage.classList.add('slide-transition');
+                
+            }, 1000); // Ganti gambar setelah 0.5 detik
+        }
+        function changeImagekiri() {
+            const slidingImage = document.getElementById('slidingImage');
+
+            slidingImage.classList.remove('slide-right');
+            slidingImage.classList.add('slide-left');
+
+            setTimeout(() => {
+                const imageUrl = images[imageIndex];
+                slidingImage.src = imageUrl;
+
+                imageIndex = (imageIndex + 1) % images.length;
+
+                slidingImage.classList.remove('slide-left');
+                slidingImage.classList.add('slide-transition');
+                
+            }, 1000); // Ganti gambar setelah 0.5 detik
+        }
+    </script>
+</body>
+<footer class="bg-green-900 text-white text-center py-1">
+    <div class="container mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Alamat Desa dan Google Map Link -->
+            <div>
+                <h3 class="text-lg font-semibold mb-2 mt-4">PADUKUHAN KARANGREJEK</h3>
+                <p class="text-xs mb-4">Karangrejek
+                    Kec. Wonosari
+                    Kabupaten Gunung Kidul<br>
+                    Daerah Istimewa Yogyakarta</p>
+
+
+                    <!-- Google Map Embed -->
+                    <a href="https://maps.app.goo.gl/ezXAVnFG5yfUvENt5">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d16267.895119030067!2d110.58146940870157!3d-7.978782400995943!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7bb376869cc77f%3A0x78b61669e92dbc0c!2sKarangrejek%2C%20Kec.%20Wonosari%2C%20Kabupaten%20Gunung%20Kidul%2C%20Daerah%20Istimewa%20Yogyakarta!5e0!3m2!1sid!2sid!4v1702987660517!5m2!1sid!2sid" 
+                        width="100%" 
+                        height="150" 
+                        allowfullscreen="" 
+                        style="border: 1px solid #ddd; border-radius: 8px;"
+                        loading="lazy" 
+                        allowfullscreen=""
+                        aria-hidden="false"
+                        tabindex="0"
+                        referrerpolicy="no-referrer-when-downgrade">
+                        
+                    </iframe>
+                    </a>
+            </div>
+            <div>
+
+            </div>
+            <div>
+                <h3 class="text-lg mt-4 font-semibold mb-1">KONTAK</h3>
+                <a href="https://www.instagram.com/visitkarangrejek/?utm_source=ig_web_button_share_sheet&igshid=OGQ5ZDc2ODk2ZA==" target="_blank" class="mb-4 text-l font-bold">Instagram: @visitkarangrejek </a>
+
+            </div>
+
+            <div>
+               
+            </div>
+
+
+            <!-- Pihak Pembuat -->
+
+
+            <!-- Tanggal Pembuatan -->
+
+        </div>
+
+    </div>
+    <div class="bg-green-200 text-black text-center mx-auto py-4">
+        <a href="https://www.instagram.com/karangrejekbersahaja/?utm_source=ig_web_button_share_sheet&igshid=OGQ5ZDc2ODk2ZA==" target="_blank" class=" mb-2">KKN UNY Karangrejek 2023</a>
+    </div>
+</footer>
+
+</html>
